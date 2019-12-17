@@ -18,31 +18,33 @@ first_name = name[0].to_s
 sleep 0.3
  puts "*" + " "*15 + "Lets start our game!".light_blue + " "*16 +"*"
 
-print (" "*7) + "Give me a noun: ".light_cyan
-noun_1 = gets.chomp.capitalize.to_s
 
-print (" "*7) +   "Give me another noun: ".light_cyan
-noun_2 = gets.chomp.downcase.to_s
+blanks = [ "noun", "noun", "noun", "verb", "noun", "adverb"]
 
-print (" "*7) +  "Give me another noun: ".light_cyan
-noun_3 = gets.chomp
+vowels = [ "a", "e", "i", "o", "u" ]
 
-print (" "*7) + "Give me a verb: ".light_cyan
-verb = gets.chomp
+answer = blanks.map do |request|
+  article = vowels.include?(request[0]) ? "an" : "a"
+  print (" "*7) + "Give me #{article} #{request}: ".light_cyan
+  response = gets.chomp
+ end
 
-print (" "*7) + "Give me an adverb: ".light_cyan
-adverb = gets.chomp
+
+text = (" "*15) +("Give me some #{answer[0]} ,".light_yellow )+"\n"+
+       (" "*15 )+ ("Give me some #{answer[1]}".light_magenta) +"\n"+
+       (" "*15 )+ ("Give me another #{answer[2]} ,".light_yellow) +"\n"+
+       (" "*15) + ("I wanna #{answer[3]} #{answer[4]} #{answer[5]}!".light_magenta )
 
  puts "*" + ("~" * 51).yellow + "*"
  puts "*"+" "*51 +"*"
- puts " "*15 + "Give me some #{noun_1} ,".light_yellow
- puts " "*15 + "Give me some #{noun_2}".light_magenta
- puts " "*15 + "Give me another #{noun_3} ,".light_yellow
- puts " "*15 + "I wanna #{verb} once #{adverb}!".light_magenta
+
+ puts text
+  
  puts "*" + " "*51 + "*"
  puts "*" + ("~" * 51).light_red+ "*"
  puts ("*" * 6).light_red + "!!! DEVELOPED BY: SYEDA ISMAT FARJANA !!!".green.underline + ("*" * 6).light_red
  puts ("*" * 53).light_red
+ puts " "
  
 
 
