@@ -38,7 +38,7 @@ adverb = gets.chomp
  puts "              give me some #{noun_2}                 ".light_magenta
 
  puts "            Give me another #{noun_3} ,              ".light_yellow
- puts "          I wanna #{verb} once #{adverb}!            ".light_magenta
+ puts "           I wanna #{verb} once #{adverb}!            ".light_magenta
  puts "*                                                   *"
  puts "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*".light_magenta
  puts "********* DEVELOPED BY: SYEDA ISMAT FARJANA *********".black.on_yellow
